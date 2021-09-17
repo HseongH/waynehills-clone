@@ -5,12 +5,18 @@ import Summary from './Summary';
 import Action from './Action';
 import Footer from './Footer';
 
-const MainPresenter: React.FC = (props) => {
+export type MainProps = {
+  getVideoList: () => void;
+};
+
+const MainPresenter: React.FC<MainProps> = (props) => {
+  const { getVideoList } = props;
+
   return (
     <>
       <Header />
       <Summary />
-      <Action />
+      <Action getVideoList={getVideoList} />
       <Footer />
     </>
   );
