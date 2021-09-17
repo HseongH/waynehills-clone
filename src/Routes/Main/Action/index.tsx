@@ -1,13 +1,13 @@
 import React from 'react';
-import classNames from 'classnames';
+// type
+import { MainProps } from '../MainPresenter';
 // elements
 import { Container, Button } from '../../../elements';
 // style
 import './style.scss';
 
-const Action = () => {
+const Action = ({ getVideoList }: MainProps) => {
   const [value, setValue] = React.useState('');
-  const [step, setStep] = React.useState(0);
 
   return (
     <section className="section__action">
@@ -29,7 +29,7 @@ const Action = () => {
               <h3 className="step-title">Scripting</h3>
             </div>
 
-            <div className={classNames('content', { visible: step === 0 })}>
+            <div className="content">
               <textarea
                 className="scripting-enter-area"
                 value={value}
@@ -39,7 +39,9 @@ const Action = () => {
 
               <p className="number-of-characters">{value.length} letters</p>
 
-              <Button color="white">Convert</Button>
+              <Button color="white" size="middle" onClick={getVideoList}>
+                Convert
+              </Button>
             </div>
           </div>
 
@@ -48,32 +50,12 @@ const Action = () => {
               <span className="step">2</span>
               <h3 className="step-title">Matching videos</h3>
             </div>
-
-            <div className={classNames('content', { visible: step === 1 })}>
-              {/* <textarea
-              value={value}
-              onChange={({ target }) => setValue(target.value)}
-              placeholder="Put your script here 500~5,000 letters."
-            />
-            <p className="number-of-characters">{value.length} letters</p>
-            <Button color="white">Convert</Button> */}
-            </div>
           </div>
 
           <div className="action">
             <div className="action-step">
               <span className="step">3</span>
               <h3 className="step-title">Encoding</h3>
-            </div>
-
-            <div className={classNames('content', { visible: step === 2 })}>
-              {/* <textarea
-              value={value}
-              onChange={({ target }) => setValue(target.value)}
-              placeholder="Put your script here 500~5,000 letters."
-            />
-            <p className="number-of-characters">{value.length} letters</p>
-            <Button color="white">Convert</Button> */}
             </div>
           </div>
         </Container>

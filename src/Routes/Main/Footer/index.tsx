@@ -1,10 +1,18 @@
 import React from 'react';
 // elements
-import { Container } from '../../../elements';
+import { Container, Button } from '../../../elements';
+// components
+import Terms from './Terms';
 // style
 import './style.scss';
 
 const Footer = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = (): void => {
+    setOpen(true);
+  };
+
   return (
     <footer>
       <div className="footer__top">
@@ -22,7 +30,7 @@ const Footer = () => {
       <div className="footer__bottom">
         <Container>
           <div className="terms-of-use">
-            <button className="btn btn--terms">Terms of Use</button>
+            <Button onClick={handleOpen}>Terms of Use</Button>
           </div>
 
           <div className="footer__info">
@@ -37,6 +45,8 @@ const Footer = () => {
           </div>
         </Container>
       </div>
+
+      {open ? <Terms setOpen={setOpen} /> : null}
     </footer>
   );
 };

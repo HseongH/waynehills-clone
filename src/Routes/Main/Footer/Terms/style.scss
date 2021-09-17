@@ -1,0 +1,48 @@
+.terms {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .terms-container {
+    max-width: 80vw;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 11px 15px -7px #0003, 0 24px 38px 3px #00000024,
+      0 9px 46px 8px #0000001f;
+    background: #fff;
+  }
+
+  .main-title,
+  .sub-title {
+    font-weight: 500;
+  }
+
+  .main-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .sub-title {
+    margin-bottom: 16px;
+  }
+
+  .contents {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      padding: 0.5rem 1rem;
+    }
+  }
+}

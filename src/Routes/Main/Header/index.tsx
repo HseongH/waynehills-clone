@@ -20,7 +20,7 @@ const Header = () => {
           </Link>
         </h1>
 
-        <Button color="black">
+        <Button color="black" size="middle">
           <Link to="/login">Sign in</Link>
         </Button>
       </Container>

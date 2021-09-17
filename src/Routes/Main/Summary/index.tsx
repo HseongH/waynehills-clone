@@ -4,7 +4,7 @@ import TextSnippetOutlinedIcon from '@mui/icons-material/TextSnippetOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import MovieCreationOutlinedIcon from '@mui/icons-material/MovieCreationOutlined';
 // elements
-import { Container } from '../../../elements';
+import { Container, Button } from '../../../elements';
 // style
 import './style.scss';
 
@@ -37,13 +37,9 @@ const Summary = () => {
         <div className="menu-wrapper">
           <div className="menu-tab">
             {tabList.map((list, idx) => (
-              <button
-                key={idx}
-                className="tab-list"
-                onClick={() => setTab(idx)}
-              >
+              <Button key={idx} onClick={() => setTab(idx)}>
                 {list}
-              </button>
+              </Button>
             ))}
 
             <div
