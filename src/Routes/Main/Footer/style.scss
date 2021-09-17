@@ -1,0 +1,33 @@
+footer {
+  .footer__top {
+    text-align: center;
+
+    .license {
+      font-size: 26px;
+      margin-top: 10px;
+    }
+
+    .stock-logo {
+      margin: 20px 0;
+    }
+  }
+
+  .footer__bottom {
+    border-top: 1px solid #0000001f;
+
+    .container {
+      padding: 10px;
+      display: flex;
+    }
+
+    .terms-of-use,
+    .footer__info {
+      flex: 1;
+    }
+
+    .footer__info p {
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+  }
+}
